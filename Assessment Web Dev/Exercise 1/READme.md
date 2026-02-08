@@ -39,7 +39,7 @@ Exercise 1/
 |- READme.md  
 
 ## Screenshot
-![Recipe Preview](screenshot.png)
+![Recipe Preview](Screenshot.png)
 
 ## How to Run
 1. Open the folder
