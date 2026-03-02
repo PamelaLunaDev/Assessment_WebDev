@@ -1,79 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Document type declaration. Tells the browser that page uses HTML5. -->
 
-<head>
-    <meta charset="UTF-8">
-    <title>Easy Pancake Recipe</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en"> <!-- Root element of the page. "lang" defines the main language of the page (important for accessibility).-->
+<head> <!-- Contains metadata about the page. (Not visible in the main content). -->
+    <meta charset="UTF-8"> <!-- Defines the character encoding. Allows accents and special symbols to display correctly.-->
+    <meta name="viewport" content="width=service-width, initial-scale=1.0"> <!-- Makes the page responsive on smaller screens (like mobile devices.)-->
+    <title>Cooking with Andy!</title> <!-- Text displayed on the browser tab. -->
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Connects this HTML file to the external CSS stylesheet that controls the page styling. -->
 </head>
 
-<body>
+<body> <!-- Everything visually displayed on the page goes inside the body. -->
 
-    <!--Header-->
-    <header>
-        <h1>Easy Pancake Recipe</h1>
-        <p><i>Quick, soft</i> and <i>delicious</i> <b>homemade pancake</b></p>
+    <header> <!-- Top area of the page. Usually contains the title and navigation. -->
+        <h1>Cooking with Andy!</h1> <!-- Main page heading. There should normally be only one h1 per page. -->
+        <nav> <!-- Navigation area of the website. Contains links to other pages. -->
+            <a href="#">Home</a> <!-- Link element. href="#" means it currently does not navigate anywhere. -->
+            <a href="#">Blog</a>
+            <a href="#">Browse</a>
+        </nav>
+
     </header>
-<!--Main content-->
-<main>
+    <main> <!--  Main content of the page. Only one main element should exist per page. -->
+        <article> <!-- Represents independent content. Here it contains the full recipe. -->
+            <h2>Chocolate Chip Cookies</h2> <!-- Recipe title. -->
+            <p>Delicious homemade cookies with gooey chocolate chips!</p> <!-- Paragraph describing the recipe. -->
 
-    <!--Ingredients section-->
-    <section>
-        <h2>Ingredients</h2>
-        <ul>
-            <li>1 egg</li>
-            <li>1/4 cup sugar</li>
-            <li>1 pinch of salt</li>
-            <li>1/2 cup of milk</li>
-            <li>1.5 tablespoon oil</li>
-            <li>1 teaspoon vanilla essence</li>
-            <li>1 cup all purpose flour</li>
-            <li>1 teaspoon baking powder</li>
-        </ul>
-        <p>Cup size used: 250 ml</p>
-    </section>
+            <!-- Ingredients -->
+             <section> <!-- Section grouping related content. This groups the ingredients. -->
+                <h3>Ingredients</h3> <!-- Section subtilte. -->
+                <ul> <!-- List with bullet points -->
+                    
+                    <!-- Each list item is placed inside an <li> element. -->
+                    <li>2 1/4 cups flour</li>
+                    <li>1/2 teaspoon baking soda</li>
+                    <li>1 cup unsalted butter, softened</li>
+                    <li>1/2 cup granulated sugar</li>
+                    <li>1 cup packed brown sugar</li>
+                    <li>1 teaspoon vanilla extract</li>
+                    <li>2 large eggs</li>
+                    <li>2 cups semisweet chocolate chips</li>
+                </ul>
+             </section>
 
-    <!--Instructions section-->
-    <section>
-        <h2>Instructions</h2>
-        <ol>
-            <li>Mix the egg, sugar, salt, milk, oiland vanilla essence using a whisk.</li>
-            <li>Add the flour and baking powder.</li>
-            <li>Mix everithing well.</li>
-            <li>Whisk until you get a smooth batter.</li>
-            <li>Grease the frying pan with oil.</li>
-            <li>Pour 1/8 cup, about 2 tablespoons, of batter into the pan.</li>
-            <li>Cook on low to medium heat.</li>
-            <li>Wait until the bubbles stop forming.</li>
-            <li>Flip the pancake.</li>
-            <li>Cook for another 1.5 to 2 minutes.</li>
-            <li>Serve with butter.</li>
-        </ol>
-    </section>
+             <aside> <!-- Complementary content. Extra information related to the recipe. -->
+                <p>If you don't have eggs, you can use a suitable egg substitute like applesauce, mashed bananas, or yogurt. Use 1/4 cup of the substitute for each egg in the recipe.</p>
+             </aside>
 
-    <!--Video link section-->
-    <section>
-        <h2>Watch the video</h2>
-        <p>
-            <a href="https://www.youtube.com/watch?v=NCMKedZvnyI">Click here to watch the recipe video</a>
-        </p>
-    </section>
+             <section> <!-- New section grouping the instructions. -->
+                <h3>Instructions</h3>
+                <ol> <!-- List numbered. -->
 
-    <!--More recipe button-->
-    <section>
-        <h2>More Recipes</h2>
-        <button onclick="location.href='https://www.youtube.com/watch?v=NCMKedZvnyI'">
-            View More Recipes
-        </button>
-    </section>
-
-</main>
-
-<!--Footer-->
-<footer>
-    <p>Created by Pamela Luna</p>
-</footer>
-
+                    <!-- Numbered step-by-step preparation instructions. -->
+                    <li>Preheat your oven to 190°C.</li>
+                    <li>In a small bowl, mix the flour and baking soda. Set aside.</li>
+                    <li>In a large mixing bowl, cream together the softened butter, granulated sugar, brown sugar, and vanilla extract until smooth.</li>
+                    <li>Add the eggs one at a time, beating well after each addition.</li>
+                    <li>Gradually add the flour mixture to the wet ingredients, mixing until well combined.</li>
+                    <li>Stir in the chocolate chips.</li>
+                    <li>Drop rounded tablespoons of dough onto ungreased baking sheets.</li>
+                    <li>Bake in the oven for 8-10 minutes or until the edges are golden brown.</li>
+                    <li>Allow the cookies to cool on the baking sheets for a few minutes before transferring them to wire racks to cool completely.</li>
+                </ol>
+             </section>
+        </article> 
+    </main>
+    
+    <footer> <!-- Bottom area of the page. Contains copyright or final information. -->
+    <p>Cooking With Andy © 2024</p> <!-- Simple text inside the footer. -->
+    </footer>
 
 </body>
 </html>
