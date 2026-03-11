@@ -1,0 +1,65 @@
+/* Reset the browser default styles. Applies rules to ALL elements on the page (*) */
+* {
+    margin: 0; /* Removes all default margins automatically added by the browser */
+    padding: 0; /* Removes all default internal spacing */
+    box-sizing: border-box; /* Makes width and height include padding and border. This makes layout control much easier. */
+}
+
+body {
+    margin: 0; /* Removes the default margin the browser adds around the page */
+    font-family: Arial, Helvetica, sans-serif; /* Defines the main font for the text. First tries Arial, if not available uses Helvetica, if not available uses any sans-serif font. */
+    background-color: #e6e6e6; /* Defines the background color of the entire page. This light gray creates contrast with the white central card. */
+    color: #222; /* Defines the default text color. It is a very dark gray (almost black), but softer. */
+}
+
+/* White central container - Styles the element with the class "card" */
+.card {
+    max-width: 850px; /* Defines the maximum width of the card. It will never be larger than 850px, even on large screens. */
+    margin: 40px auto; /* 40px on top and bottom. "auto" on the sides centers the element horizontally. */
+    padding: 50px; /* Internal space between the content and the card edges. */
+    background-color: white; /* White background for the card to stand out from the gray background. */
+    border-radius: 25px; /* Rounds the corners of the card. */
+}
+
+/* Main title - Styles all h1 elements on the page */
+h1 {
+    font-size: 72px; /* Sets a very large font size */
+    color: #3a8f1f; /* Green color used in the design */
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 40px; /* Space below the title */
+}
+
+/* Subtitles - Styles all h2 elements */
+h2 {
+    font-size: 44px; /* Smaller than h1 but still large */
+    color: #3a8f1f; /* Same green color as the main title */
+    text-align: center; /* Centers the subtitles */
+    margin: 50px 0 20px 0; /* Space above (50px). Space below (20px). Sides 0 */
+}
+
+/* Styles the h3 elements */
+h3 {
+    font-size: 32px; /* Smaller than h2 */
+    margin-bottom: 15px; /* Space below the subtitle */
+}
+
+/* Paragraphs - Applies style to all <p> elements */
+p {
+    font-size: 18px; /* Comfortable size for reading */
+    line-height: 1.7; /* Line spacing. The larger it is, the more readable and spaced the text appears. */
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+/* Green aside box. Styles the element with class "callout" */
+.callout {
+    background-color: #3a8f1f; /* Green background to highlight the box */
+    color: white; /* White text to contrast with the green background */
+    padding: 30px; /* Internal spacing inside the box */
+    border-radius: 20px; /* Rounded corners */
+    margin: 40px 0; /* Space above and below the box */
+}
+
+/* Text inside the callout. Selects only <p> elements inside the class callout */
+.callout p {
+    color: white; /* Ensures that text inside the green box remains white, even if another rule exists for paragraphs. */
+}
