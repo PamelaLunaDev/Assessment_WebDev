@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Root element of the page. "lang" defines the main language -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Allows special characters to display correctly -->
+    <title>J's Gallery</title> <!-- Name displayed on the browser tab -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the layout work properly on smaller screens -->
+    <link rel="stylesheet" href="style.css"> <!-- Connects the external CSS file -->
+</head>
+
+<body> <!-- All visible content of the page -->
+
+    <header class="site-header"> <!-- Website header -->
+       
+        <!-- Class used for styling in CSS -->
+
+        <h1>J's Gallery</h1> <!-- Main title of the page -->
+
+        <nav class="site-nav" aria-label="Main navigation"> <!-- Navigation area. aria-label helps screen readers identify the menu -->
+            <a href="#">Home</a> <!-- Navigation link -->
+            <a href="#">About</a> <!-- Navigation link -->
+            <a href="#">Gallery</a> <!-- Navigation link -->
+        </nav>
+    </header>
+
+    <main class="container"> <!-- Main content of the page. Class controls width and centering -->
+
+        <!-- Intro: text left, cow image right -->
+        <section class="intro"> <!-- Introductory section with text and image -->
+            <div class="intro-text"> <!-- Container used only to organize the text -->
+                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent mollis adipiscing per id libero libero.
+                    Tempus pretium netus molestie scelerisque facilisis tristique volutpat ultricies. Nostra ligula ac
+                    pulvinar rutrum non rhoncus mauris facilisi. Quisque maximus commodo sollicitudin, montes congue
+                    imperdiet. Est ensure you include all key elements shown in the screenshot, and you do not need to be
+                    pixel-perfect.</p> <!-- Paragraph of text -->
+                <p>Lectus ultrices nibh lobortis tempus facilisis sit conubia taciti. Non torquent amet nibh elit ante
+                    fermentum praesent cras. Et suspendisse egestas eros erat aptent sollicitudin. Nulla tortor purus posuere
+                    auctor himenaeos malesuada. Turpis phasellus enim venenatis aliquam pellentesque senectus, id ultrices.
+                    Praesent tellus consequat phasellus cubilia mattis mauris natoque litora. Fringilla cursus montes
+                    inceptos nec venenatis platea.</p> <!-- Paragraph of text -->
+            </div>
+
+            <figure class="intro-figure"> <!-- Figure represents visual content related to the text -->
+                <img src="cow.jpg" alt="Highland cow standing in a landscape"> <!-- Cow image. alt describes the image for accessibility -->
+            </figure>
+        </section>
+
+        <section class="gallery" aria-label="Media gallery"> <!-- Media gallery section. aria-label describes the purpose of the section -->
+
+            <!-- Row 1: 70% video + 30% image -->
+            <div class="row"> <!-- Gallery row organized with Flexbox -->
+                <video class="tile w-70" src="video.mp4" controls></video> <!-- Video with controls. w-70 indicates 70% width -->
+                <img class="tile w-30" src="img4598.jpg" alt="Foggy station lights at night"> <!-- Image occupying 30% of the width -->
+            </div>
+
+            <!-- Row 2: 30% image + 70% image -->
+            <div class="row"> <!-- Second gallery row -->
+                <img class="tile w-30" src="img4532.jpg" alt="Vintage camera close-up"> <!-- Smaller image -->
+                <img class="tile w-70" src="photo01.jpg" alt="Snowy mountain landscape"> <!-- Larger image -->
+            </div>
+
+            <!-- Row 3: 70% image + 30% image -->
+            <div class="row"> <!-- Third gallery row -->
+                <img class="tile w-70" src="photo31.jpg" alt="Wide landscape with hills and clouds"> <!-- Larger image -->
+                <img class="tile w-30" src="car.jpg" alt="Old car parked outside a building with snow"> <!-- Smaller image -->
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

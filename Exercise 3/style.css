@@ -1,0 +1,142 @@
+/* Reset the browser default styles. Applies rules to ALL elements on the page (*) */
+* {
+    margin: 0; /* Removes all default margins automatically added by the browser */
+    padding: 0; /* Removes all default internal spacing */
+    box-sizing: border-box; /* Makes width and height include padding and border. This makes layout control much easier. */
+}
+
+/* Page base. General styling of the page body */
+body {
+    font-family: Georgia, "Times New Roman", serif; /* Defines the main font of the site */
+    background-color: #d9d9d9; /* Defines the page background (light grey) */
+    color: #111; /* Defines the default text color (soft black) */
+}
+
+/* Header - Styling of the top area of the site */
+.site-header {
+    text-align: center; /* Centers the content horizontally */
+    padding: 35px 20px 10px; /* Internal spacing: 35px top, 20px sides, 10px bottom */
+}
+
+/* Style of the main title */
+.site-header h1 {
+    font-size: 92px; /* Large title size */
+    font-weight: 700; /* Makes the text bold */
+    margin-bottom: 12px; /* Space below the title */
+}
+
+/* Styling of the navigation links */
+.site-nav a {
+    margin: 0 55px; /* Horizontal space between the links */
+    font-size: 22px; /* Font size of the links */
+    color: blue; /* Default blue color */
+    text-decoration: underline; /* Underline style */
+}
+
+/* Constrain page width like the model. Limits the maximum width of the page */
+.container {
+    max-width: 1100px; /* The page will never be wider than 1100px */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px; /* Internal spacing */
+}
+
+/* Intro: text + image. Section that contains text and image side by side */
+.intro {
+    display: flex; /* Activates Flexbox (modern row layout) */
+    gap: 30px; /* Space between the two blocks */
+    align-items: flex-start; /* Aligns items to the top */
+    margin-top: 10px; /* Space above the section */
+}
+
+/* Make text column slightly narrower than image like the screenshot. Defines the width of the text column */
+.intro-text {
+    flex: 0 0 48%; /* Does not grow (0). Does not shrink (0). Occupies 48% of the width */
+    font-size: 18px; /* Text size */
+    line-height: 1.55; /* Line spacing */
+}
+
+/* Adds space between paragraphs */
+.intro-text p + p {
+    margin-top: 18px; /* Space above the second paragraph */
+}
+
+/* Defines the width of the image */
+.intro-figure {
+    flex: 0 0 52%; /* Occupies 52% of the width */
+    margin: 0;
+}
+
+/* Styles the image */
+.intro-figure img {
+    width: 100%; /* Occupies the full width of the column */
+    height: auto; /* Maintains original proportion */
+    display: block; /* Removes extra space below the image */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35); /* Adds shadow to give depth */
+}
+
+/* Gallery - Gallery section */
+.gallery {
+    margin-top: 28px; /* Space above the gallery */
+}
+
+/* Each row is a flex container. Each gallery row uses Flexbox */
+.row {
+    display: flex; /* Arranges images side by side */
+    gap: 0; /* No space between images */
+}
+
+/* All tiles same height, no gaps, cropped. Applies common style to images and video */
+.tile {
+    height: 300px; /* All media will have 300px height */
+    object-fit: cover; /* Crops the image to fill the space without distortion */
+    display: block; /* Removes extra spaces */
+}
+
+/* 70/30 widths - Defines proportional widths */
+.w-70 {
+    width: 70%; /* Occupies 70% of the row */
+}
+
+.w-30 {
+    width: 30%; /* Occupies 30% of the row */
+}
+
+/* Ensure video behaves nicely / Adjusts video specifically */
+video.tile {
+    background-color: #000; /* Black background in case the video does not load */
+}
+
+/* Responsive: stack on small screens. Rules applied when screen is smaller than 900px */
+@media (max-width: 900px) {
+
+    .intro {
+        flex-direction: column; /* Stacks text and image vertically */
+    }
+
+    .intro-text,
+    .intro-figure {
+        flex: 0 0 auto;
+        width: 100%; /* Each element occupies 100% width */
+    }
+
+    .row {
+        flex-direction: column; /* Stacks images vertically */
+    }
+
+    .w-70,
+    .w-30 {
+        width: 100%; /* All images occupy 100% width */
+    }
+
+    .tile {
+        height: 260px; /* Reduces height on smaller screens */
+    }
+
+    .site-header h1 {
+        font-size: 60px; /* Reduces title size */
+    }
+
+    .site-nav a {
+        margin: 0 18px; /* Reduces space between links */
+    }
+}
