@@ -1,0 +1,242 @@
+/* Basic reset - Applies the rules to ALL elements on the page */
+* {
+  margin: 0; /* Removes default browser margins */
+  padding: 0; /* Removes default internal spacing */
+  box-sizing: border-box; /* Makes padding and border included in the total width/height */
+}
+
+/* Blue background and default font, keeping the original layout */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Defines the main font of the site */
+  background: #96e5ff; /* Defines the page background colour */
+  color: #111; /* Defines the default text color */
+}
+
+/* Skip link: only appears when the user presses Tab - Accessibility link to jump directly to the main content */
+.skip-link {
+  position: absolute; /* Removes it from the normal page flow */
+  left: -999px; /* Hides it outside the screen */
+  top: 10px;
+  background: #fff;
+  color: #000;
+  padding: 10px 12px; /* Internal spacing */
+  border-radius: 6px; /* Rounded corners */
+  text-decoration: none; /* Removes underline */
+  z-index: 9999; /* Keeps it above other elements */
+}
+
+.skip-link:focus {
+  left: 10px; /* When it receives focus (TAB key), it appears on the screen */
+}
+
+/* Site header */
+.site-header {
+  padding: 18px 0 10px; /* Internal spacing: top 18px, sides 0, bottom 10px */
+}
+
+/* Keeps exactly the central column of the header */
+.top-bar {
+  position: relative; /* Allows absolute positioning inside it */
+  max-width: 520px; /* Limits maximum width */
+  margin: 0 auto; /* Centers horizontally */
+  display: flex; /* Activates Flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: start; /* Aligns elements at the top */
+}
+
+/* Decorative divider */
+.divider {
+  width: 320px; /* Defines the image width */
+  height: auto; /* Keeps original proportion */
+  display: block; /* Removes extra spacing */
+  margin: 10px auto 0; /* Centers and adds space above */
+}
+
+/* Cart on the right corner */
+.cart {
+  position: absolute; /* Positions freely inside top-bar */
+  right: 10px; /* Distance from the right */
+  top: 12px; /* Distance from the top */
+  display: inline-flex; /* Inline Flexbox */
+  align-items: center; /* Vertical alignment */
+  gap: 8px; /* Space between icon and number */
+  padding: 6px;
+  border-radius: 6px;
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.cart img {
+  width: 28px;
+  height: 28px; /* Defines the icon size */
+  display: block;
+}
+
+/* Cart badge */
+.cart-badge {
+  min-width: 22px; /* Minimum width */
+  height: 22px;
+  padding: 0 6px; /* Horizontal internal spacing */
+  border-radius: 999px; /* Circular shape */
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Centers the number inside the circle */
+}
+
+/* Visible focus for keyboard navigation - Improves accessibility when navigating with TAB */
+.cart:focus-visible,
+.add-btn:focus-visible,
+.footer-links a:focus-visible,
+.skip-link:focus-visible {
+  outline: 3px solid #000; /* Visible outline */
+  outline-offset: 3px; /* Space between element and outline */
+}
+
+/* Main page container - Slightly wider so the layout feels more balanced */
+.page {
+  max-width: 900px; /* Allows a more harmonious layout */
+  margin: 0 auto; /* Centers the content */
+  padding: 20px 20px 40px; /* Internal spacing */
+}
+
+/* Visually hidden but still available for screen readers - Accessibility technique */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); /* Completely clips the element */
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Intro section with visible title and description */
+.intro {
+  width: 100%; /* Uses available width */
+  max-width: 420px; /* Keeps a nice readable line length */
+  margin: 0 auto 30px; /* Centers and adds space below */
+  text-align: center; /* Centers text */
+}
+
+.page-title {
+  font-size: 34px; /* Larger heading */
+  font-weight: 700; /* Bold */
+  color: #111; /* Dark text */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.page-description {
+  font-size: 16px; /* Easy to read */
+  line-height: 1.5; /* Comfortable line spacing */
+  color: #222; /* Slightly softer dark tone */
+  max-width: 420px; /* Keeps description neat */
+  margin: 0 auto; /* Centers description block */
+}
+
+/* Gallery in a column (one item below the other), improved spacing for presentation */
+.gallery {
+  display: flex; /* Activates Flexbox */
+  flex-direction: column; /* Arranges vertically */
+  gap: 34px; /* Slightly larger space between cards */
+  align-items: center; /* Centers horizontally */
+}
+
+/* Card styled as a neat presentation block */
+.card {
+  width: 100%; /* Allows responsiveness */
+  max-width: 360px; /* Keeps the card elegant and controlled */
+  background: #ffffff; /* White card background */
+  border-radius: 14px; /* Rounded corners */
+  padding: 14px; /* Internal spacing */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12); /* Soft shadow for depth */
+}
+
+/* Photograph container - Gives the image a cleaner framed look */
+.photo {
+  background: #ffffff; /* Keeps a clean gallery style */
+  border-radius: 10px; /* Soft rounded edges */
+  overflow: hidden; /* Prevents corners from sticking out */
+  margin-bottom: 12px; /* Space below the photograph block */
+}
+
+/* Image occupies the full width of the card */
+.photo img {
+  width: 100%; /* Fills the entire available width */
+  height: auto; /* Maintains proportion */
+  display: block; /* Removes extra spacing */
+}
+
+/* Caption with light background, keeping the original style but a little more polished */
+.caption {
+  background: #f7f7f7; /* Light grey background */
+  color: #69d2ff; /* Blue text */
+  font-weight: 700; /* Bold */
+  padding: 12px 14px; /* Slightly more internal spacing */
+  line-height: 1.35; /* Better readability */
+  font-size: 15px; /* Slightly larger text */
+}
+
+/* Price tag with stronger visual emphasis */
+.price-tag {
+  display: inline-block; /* Keeps it compact */
+  margin-top: 6px; /* Space above */
+  margin-bottom: 10px; /* Space below */
+  padding: 8px 14px; /* Internal spacing */
+  background: #69d2ff; /* Blue highlight */
+  color: #fff; /* White text */
+  font-weight: 700; /* Bold */
+  font-size: 15px; /* Slightly larger */
+  border-radius: 999px; /* Pill shape */
+}
+
+/* Link styled like a button, for simulation */
+.add-btn {
+  display: inline-block; /* Allows padding and dimensions */
+  margin-top: 0;
+  background: #111; /* Dark background for stronger contrast */
+  border: none; /* Cleaner button look */
+  color: #fff; /* White text */
+  font-size: 13px; /* Slightly larger text */
+  font-weight: 700; /* Stronger emphasis */
+  padding: 10px 16px; /* More balanced button size */
+  text-decoration: none; /* Removes link appearance */
+  border-radius: 999px; /* Rounded pill shape */
+  cursor: pointer; /* Click cursor */
+  transition: background 0.2s ease; /* Smooth hover effect */
+}
+
+.add-btn:hover {
+  background: #333; /* Changes colour on hover */
+}
+
+/* Footer keeping the page centred and more balanced with the main layout */
+.site-footer {
+  max-width: 900px; /* Matches the main container width */
+  margin: 30px auto 30px; /* Centers and adds spacing */
+  padding: 0 20px;
+  text-align: center; /* Makes the footer feel more aligned with the page */
+}
+
+/* Copyright text */
+.copyright {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Footer links list */
+.footer-links {
+  list-style: disc; /* Shows bullet points */
+  padding-left: 0; /* Removes excessive left spacing */
+  display: inline-block; /* Keeps the list centred as a block */
+  text-align: left; /* Keeps bullets and text aligned properly */
+}
+
+.footer-links a {
+  color: blue;
+  text-decoration: underline;
+  font-weight: 700;
+}

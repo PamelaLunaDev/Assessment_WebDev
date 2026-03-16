@@ -1,0 +1,111 @@
+<!DOCTYPE html> <!-- Declares that the document uses HTML5 -->
+<html lang="en"> <!-- Main element of the page. lang="en" defines the language as English (important for accessibility and SEO). -->
+
+<head>
+  <meta charset="UTF-8" /> <!-- Allows special characters to be used correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes the page adapt correctly on mobile devices -->
+  <title>The Wandering Photographer</title> <!-- Name displayed in the browser tab -->
+  <link rel="stylesheet" href="style.css" /> <!-- Connects the HTML to the external CSS file -->
+</head>
+
+<body> <!-- Accessibility: allows skipping directly to the main content -->
+  <a class="skip-link" href="#main">Skip to main content</a> <!-- Link usually invisible visually. Allows keyboard users to jump directly to the main content -->
+
+  <header class="site-header"> <!-- Page header -->
+    
+    <div class="top-bar"> <!-- Top area that contains visual elements and the cart -->
+
+      <img class="divider" src="TheDivider.png" alt="" aria-hidden="true" /> <!-- Decorative image only. Empty alt means it does not need to be read. aria-hidden="true" makes screen readers ignore it. -->
+
+      <!-- Cart (The number is only for demonstration) -->
+      <a class="cart" href="checkout.html" aria-label="Go to checkout"> <!-- Link to the checkout page. aria-label explains the function for screen readers -->
+
+        <img src="shopping.svg" alt="" aria-hidden="true" /> <!-- Cart icon. Empty alt because it is decorative. aria-hidden prevents duplicate reading -->
+ 
+        <span class="cart-badge" aria-label="Items in basket">2</span> <!-- Number of items in the cart. aria-label describes the meaning of the number -->
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="page"> <!-- Main content area. id="main" allows the skip-link to work -->
+
+    <!-- Added title and description -->
+    <section class="intro" aria-label="Page introduction">
+      <h1 class="page-title">Travel photography prints</h1> <!-- Main page title. -->
+      <p class="page-description">
+        Explore a collection of travel photography prints captured during unforgettable journeys around the world.
+      </p>
+    </section>
+
+    <section class="gallery" aria-label="Photo gallery with prints for sale"> <!-- Gallery section. aria-label describes the purpose of the section -->
+
+      <article class="card"> <!-- Each photo is an independent piece of content -->
+        <figure class="photo"> <!-- Figure groups the image and its description -->
+          <img src="OceanPhoto.jpg" alt="Ocean view from a white cliff at sunset, with calm blue water"/> <!-- Image with detailed description for accessibility -->
+          <figcaption class="caption">
+            This was from a fabulous trip to the coast of Greenland with my family. The water was lovely, but very cold!
+          </figcaption> <!-- Text that describes the image -->
+        </figure>
+
+        <p class="price-tag">£24.99</p> <!-- ADDED PRICE -->
+
+        <a class="add-btn" href="checkout.html">Add to basket</a> <!-- Link styled as a button. Leads to checkout. -->
+      </article>
+
+      <article class="card">
+        <figure class="photo">
+          <img src="BridgePhoto.jpg" alt="View looking up at a bright red bridge structure against a blue sky"/>
+          <figcaption class="caption">
+            A picture of the Golden Gate Bridge. New York! New York!
+          </figcaption>
+        </figure>
+
+        <p class="price-tag">£22.99</p> <!-- ADDED PRICE -->
+
+        <a class="add-btn" href="checkout.html">Add to basket</a> <!-- Link styled as a button. Leads to checkout. -->
+      </article>
+
+      <article class="card">
+        <figure class="photo">
+          <img src="ValleyPhoto.jpg" alt="Wide river valley surrounded by mountains under a cloudy sky"/>
+          <figcaption class="caption">
+            Another great photo from Greenland. It's a river valley where a glacier used to be.
+          </figcaption>
+        </figure>
+
+        <p class="price-tag">£27.99</p> <!-- ADDED PRICE -->
+              
+        <a class="add-btn" href="checkout.html">Add to basket</a> <!-- Link styled as a button. Leads to checkout. -->
+      </article>
+
+      <article class="card">
+        <figure class="photo">
+          <img src="WaterfallPhoto.jpg" alt="Large waterfall flowing into a pool surrounded by green mossy rocks"/>
+          <figcaption class="caption">
+            The waterfall made such a lovely sound. I could have fallen asleep!
+          </figcaption>
+        </figure>
+
+        <p class="price-tag">£25.99</p> <!-- ADDED PRICE -->
+
+        <a class="add-btn" href="checkout.html">Add to basket</a> <!-- Link styled as a button. Leads to checkout. -->
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer"> <!-- Page footer -->
+    <p class="copyright">
+      Copyright The Wandering Photographer 2018.
+    </p> <!-- Copyright information -->
+
+    <nav aria-label="Footer links"> <!-- Footer navigation -->
+      <ul class="footer-links"> <!-- List of links -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About me</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
